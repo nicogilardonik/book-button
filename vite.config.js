@@ -3,23 +3,25 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  // Establece la ruta base desde donde se servirán los archivos
+  // Esto es útil si tu aplicación estará alojada en una subruta.
+  // Por ejemplo, si se servirá en "https://tusitio.com/ruta-constante/", usa:
   base: '/',
 
   plugins: [react()],
+
   build: {
-    lib: {
-      entry: 'src/main.jsx', // Archivo principal de tu Web Component
-      name: 'ReservationButton', // Nombre del módulo
-      fileName: () => 'reservation-button.js', // Evita nombres raros en la salida
-      formats: ['es', 'umd'], // Genera ES Module y UMD
-    },
-    assetsDir: '', // Evita que los archivos se vayan a dist/assets
+    // Define el directorio de salida del compilado
+    outDir: 'dist',
+
+    // Opcional: configura la nomenclatura de los archivos generados
     rollupOptions: {
       output: {
-        entryFileNames: 'reservation-button.js', // Asegura el nombre correcto
-        chunkFileNames: 'reservation-button-chunk.js', // Controla los chunks
-        assetFileNames: 'reservation-button.[ext]', // Evita que assets vayan a dist/assets
-      },
-    },
-  },
+        // Puedes personalizar los nombres de los archivos para que siempre sean iguales
+        entryFileNames: 'reservation-button.js',
+        chunkFileNames: 'reservation-button.js',
+        assetFileNames: 'reservation-button.[ext]'
+      }
+    }
+  }
 });
