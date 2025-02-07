@@ -9,6 +9,5 @@ import './features/rent-button/reservation-button.js';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-      <reservation-button></reservation-button>
   </StrictMode>,
 )

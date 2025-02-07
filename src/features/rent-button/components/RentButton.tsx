@@ -16,7 +16,7 @@ const RentButton = () => {
 
     return (
         <div>
-            <button onClick={openModal}>Reservar ahora</button>
+            <button className="text-2xl" onClick={openModal}>Reservar ahora</button>
 
             {isModalOpen && (
                 <div className="modal-overlay">
