@@ -18,9 +18,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Puedes personalizar los nombres de los archivos para que siempre sean iguales
-        entryFileNames: 'reservation-button.js',
-        chunkFileNames: 'reservation-button.js',
-        assetFileNames: 'reservation-button.[ext]'
+        entryFileNames: 'book-button.js',
+        chunkFileNames: 'book-button.js',
+        assetFileNames: 'book-button.[ext]'
       }
     }
   }

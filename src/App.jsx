@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <div className="card">
-          <reservation-button></reservation-button>
+          <book-button></book-button>
       </div>
     </>
   )

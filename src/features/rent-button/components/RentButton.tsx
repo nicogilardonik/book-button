@@ -2,45 +2,41 @@ import { useState } from "react";
 import "./Modal.css";
 
 const RentButton = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   const redirectToCheckout = () => {
-    window.location.href = "https://tusitio.com/checkout";
+    window.open("https://google.com/", "_blank", "width=800,height=600");
   };
 
   const buttonStyle = {
     margin: "0 auto",
-    backgroundColor: "green",
+    backgroundColor: "#732DE9",
     cursor: "pointer",
     color: "white",
-    padding: "0.6rem 1.2rem",
+    padding: "0.8rem 1.8rem",
     border: "none",
+    borderRadius: "25px",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    transition: "background-color 0.3s ease",
+  };
+
+  const hoverStyle = {
+    backgroundColor: "#8c4ff0",
   };
 
   return (
     <div>
-      <button style={buttonStyle} onClick={openModal}>
-        Reservar ahora
+      <button
+        style={buttonStyle}
+        onClick={redirectToCheckout}
+        onMouseEnter={(e) =>
+          (e.target.style.backgroundColor = hoverStyle.backgroundColor)
+        }
+        onMouseLeave={(e) =>
+          (e.target.style.backgroundColor = buttonStyle.backgroundColor)
+        }
+      >
+        Reservar
       </button>
-
-      {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h2>Confirmar Reserva</h2>
-            <p>¿Deseas continuar con el checkout de reserva?</p>
-            <div className="modal-actions">
-              <button onClick={redirectToCheckout}>Ir a Checkout</button>
-              <button onClick={closeModal}>Cancelar</button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
