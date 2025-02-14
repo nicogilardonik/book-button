@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./Modal.css";
 
-const RentButton = ({ productId }) => {
-  console.log("productId", productId);
+const RentButton = ({ productid }) => {
+  console.log("productid", productid);
 
   const redirectToCheckout = () => {
-    const checkoutUrl = `https://google.com/checkout?productId=${productId}`;
+    const checkoutUrl = `https://google.com/checkout?productId=${productid}`;
     window.open(checkoutUrl, "_blank", "width=800,height=600");
   };
 

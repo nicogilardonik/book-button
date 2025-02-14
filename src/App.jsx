@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <div className="card">
-          {/* <book-button productId="123"></book-button> */}
+          { <book-button productid="123"></book-button> }
       </div>
     </>
   )
