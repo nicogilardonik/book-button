@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Modal.css";
 
 const RentButton = ({ productId }) => {
+  console.log("productId", productId);
+
   const redirectToCheckout = () => {
     const checkoutUrl = `https://google.com/checkout?productId=${productId}`;
     window.open(checkoutUrl, "_blank", "width=800,height=600");
