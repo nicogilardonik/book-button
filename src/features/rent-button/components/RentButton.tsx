@@ -3,13 +3,15 @@ import "./Modal.css";
 
 const RentButton = ({ productid }) => {
   const redirectToCheckout = () => {
-    const checkoutUrl = `https://google.com/checkout?productId=${productid}`;
+    const checkoutUrl = `${
+      import.meta.env.VITE_BASE_CHECKOUT_URL
+    }checkout?productId=${productid}`;
     window.open(checkoutUrl, "_blank", "width=800,height=600");
   };
 
   const buttonStyle = {
     margin: "0 auto",
-    backgroundColor: "#732DE9",
+    backgroundColor: "#5B27EC",
     cursor: "pointer",
     color: "white",
     padding: "0.8rem 1.8rem",
@@ -21,7 +23,7 @@ const RentButton = ({ productid }) => {
   };
 
   const hoverStyle = {
-    backgroundColor: "#8c4ff0",
+    backgroundColor: "#774BEE ",
   };
 
   return (
