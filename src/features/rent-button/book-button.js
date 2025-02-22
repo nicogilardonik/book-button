@@ -19,7 +19,7 @@ const customReactDOM = {
 };
 
 const WebReservationButton = reactToWebComponent(RentButton, React, customReactDOM, {
-    props: ['productid']
+    props: ['productid', 'companyid']
 });
 
 customElements.define('book-button', WebReservationButton);

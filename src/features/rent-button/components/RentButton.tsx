@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./Modal.css";
 
-const RentButton = ({ productid }) => {
+const RentButton = ({ productid, companyid }) => {
   const redirectToCheckout = () => {
     const checkoutUrl = `${
       import.meta.env.VITE_BASE_CHECKOUT_URL
-    }checkout?productId=${productid}`;
+    }checkout?productId=${productid}&companyId=${companyid}`;
     window.open(checkoutUrl, "_blank", "width=800,height=600");
   };
 
